@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素行内元素转换</title>
+    <style>
+        div, p{
+            display: inline;
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;   <!--块转出行内元素，宽高属性文字居中等都无效了-->
+        }
+        span{
+            display: block;
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            background-color: burlywood;  <!--行内转出块级元素，宽高属性文字居中等有效了-->
+        }
+    </style>
+</head>
+<body>
+    <div>威武霸气</div>
+    <p>阳光帅气</p>
+    <span>相信过程</span>
+</body>
+</html>
+<script>
+    prompt("请输入你的名字："); //弹出对话框，用于接收用户输入的信息
+    document.write("填东西")  //页面输出信息
+    document.write('\"'); //输出转义字符
+    document.write('<hr>'); //输出标签
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var arr = [];
+    arr[0] = 'China';
+    arr[1] = 12;
+    arr[2] = 65;
+    arr[3] = 52;
+    arr[4] = 19;
+    alert(arr);
+    var arr1 = arr.join("&");  //Join方法返回一个字符串数组。
+    alert(arr1);
+    var arr2 = ['America', 'Japan'];
+    var arr3 = arr.concat(arr2);   //数组合并
+    alert(arr3)
+
+    var arr4 = [1,2,8,15,6,19,28];    //打印偶数
+    for (var i=0; i< arr4.length; i++){
+        if(arr4[i]%2 == 0){
+            console.log(arr4[i]);
+        }
+    }
+</script>

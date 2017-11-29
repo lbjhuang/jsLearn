@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js时间数学函数和数据类型转换</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var myDate = new Date();
+    console.log(myDate.getDate());
+    console.log(myDate.getMonth());
+    console.log(myDate.getMinutes());
+    console.log(myDate.getSeconds());
+
+    console.log(Math.ceil(5.25));
+    console.log(Math.floor(5.25));
+    console.log(Math.pow(2,5));
+    console.log(Math.round(5.25));
+
+
+
+    //小数类型的字符串，转换之后得到的是原数字。
+    n = "james";
+    n1 = "168";
+    console.log(Number(n1));  //数字类型的字符串，转换之后得到的数字。
+    console.log(Number(n));   //非数字字符串，转换之后得到是NaN。
+    m = 58;
+    m2 = m.toString();  //转成字符串
+    console.log(typeof(m)); //number
+
+    k = "25king";
+    console.log(parseInt(k)); //25  数字开头的字符串，转换之后得到的是前边的数字。
+
+</script>
