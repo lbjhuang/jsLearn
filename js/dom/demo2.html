@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom节点</title>
+</head>
+<body>
+    <h2>获得文本节点（对象）</h2>
+    <input type="button" value="创建追加" onclick="f1()">
+
+</body>
+</html>
+<script type="text/javascript">
+    //########################## 1.节点的追加 ###################################/
+//    function f1(){
+//        var ull = document.createElement('ul');
+//        var lii = document.createElement('li');
+//        var txt = document.createTextNode('汽车');
+//        //节点追加
+//        lii.appendChild(txt);
+//        ull.appendChild(lii);
+//        document.getElementsByTagName('body')[0].appendChild(ull);
+//    }
+
+    var ull = document.createElement('ul');
+    var cars = ['奔驰','别克','路虎'];
+    var address = ['德国','美国', '英国'];
+    function f1() {
+        for (var i=0; i<cars.length;i++){
+            var lii = document.createElement('li');
+            var txt = document.createTextNode(cars[i]);
+            lii.setAttribute('addr', address[i]);
+            lii.appendChild(txt);
+            ull.appendChild(lii);
+        }
+        document.getElementsByTagName('body')[0].appendChild(ull);
+    }
+</script>

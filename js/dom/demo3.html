@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom节点</title>
+</head>
+<body>
+    <h2>获得文本节点（对象）</h2>
+    <input type="button" value="追加" onclick="f1()">
+    <ul>
+        <li>奔驰</li>
+        <li>别克</li>
+        <li>路虎</li>
+    </ul>
+</body>
+</html>
+<script type="text/javascript">
+    //########################## 1.节点的追加和替换 ###################################/
+    function f1() {
+        var lii = document.createElement('li');
+        var txt = document.createTextNode('红旗');
+        lii.appendChild(txt);
+        //把创建好的li节点追加在不同的位置
+        ull = document.getElementsByTagName('ul')[0];  //末端
+        //ull.appendChild(lii);
+        var bieke = document.getElementsByTagName('li')[1];  //指定节点前面
+        //ull.insertBefore(lii,bieke);
+        ull.replaceChild(lii, bieke);   //替换节点
+    }
+</script>

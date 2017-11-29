@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom节点</title>
+</head>
+<body>
+    <h2>获得文本节点（对象）</h2>
+    <ul>
+        <li>中国</li>
+        <li>美国</li>
+        <li>德国</li>
+    </ul>
+    <input type="text" id="username" value="jack" color='yellow' onclick="f1()" class="user"/><br />
+    <input type="text" id="email" value="jack@163.com" /><br />
+    <input type="button" value="设置" onclick="f2()">
+</body>
+</html>
+<script type="text/javascript">
+    //########################## 1.节点 ###################################/
+    var name= document.getElementById('username');
+    console.log(name);
+    var item = document.getElementsByTagName('input');
+    //console.log(item[0]);
+    //console.log(item[1]);
+
+    //首先获得元素节点对象
+    var hh = document.getElementsByTagName('h2')[0];
+    //其次获得元素节点内部子节点
+    console.log(hh.firstChild.nodeValue);  //第一个
+    var lis = document.getElementsByTagName('ul')[0];
+    console.log(lis.childNodes);  //nodeList(空白 li(中国) 空白 li(美国) 空白 li(德国) 空白)
+    console.log(lis.childNodes.length);  //子节点长度---7，会把回车/空白 也当做节点处理
+
+    //上，下一个兄弟节点
+    var america = document.getElementsByTagName('li')[1];  //先获取美国的那个li节点
+    console.log(america.nextSibling.nextSibling);  //空白--<li> 德国</li>
+    console.log(america.previousSibling.previousSibling);  //空白--<li> 中国</li>
+
+    //父节点
+    var uls = document.getElementsByTagName('ul')[0];
+    console.log(uls.parentNode);   //body
+    console.log(uls.parentNode.parentNode);   //html
+    console.log(uls.parentNode.parentNode.parentNode);   //document
+
+
+
+
+    //########################## 2.节点的属性 ###################################/
+    var user = document.getElementsByTagName('input')[0];
+    function f1() {
+        //属性值获取
+        //w3c规定的属性（type id name class等）可以直接用  元素节点对象.属性名称 的格式获取
+        console.log(user.type);   //点击一次输出user这个input的type属性名称 --- text
+        console.log(user.id);   //点击一次输出user这个input的id属性名称 --- username
+        console.log(user.className);   //点击一次输出user这个input的class属性名称 --- user
+        //自定义的属性用 元素节点对象.getAttribute() 格式来获取
+        console.log(user.getAttribute('color'));   //获取自定义属性 --- yellow
+    }
+
+    function f2() {
+        //属性值设置
+        //w3c规定的属性（type id name class等）可以直接用  元素节点对象.属性名称 = 属性值 的格式设置属性值
+        user.name = 'email';  //
+        user.value = '867999030@qq.com';
+        //自定义的属性可以用 元素节点对象.setAttribute(属性，属性值)的格式来设置属性值
+        user.setAttribute('color', 'red');
+    }
+</script>

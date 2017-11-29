@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+
+    <script type="text/javascript">
+       var arr1 = ['henan', 'anhui', 'fujian', 'guangdong'];
+       arr1.push('hunan');  //入栈
+       console.log(arr1);
+       var p = arr1.pop();  //出栈
+       console.log(p);
+       console.log(arr1);
+
+       console.log(arr1.length);
+       for(k in arr1){     //遍历
+           console.log('第'+k+'个值是：'+arr1[k]);
+       }
+       console.log(arr1.indexOf('fujian'));  //查找位置 2
+       arr1.push('fujian');  //压入一个fujian
+       console.log(arr1.lastIndexOf('fujian'));  //查找最后出现位置 4
+    </script>
+</head>
+<body>
+
+</body>
+</html>
