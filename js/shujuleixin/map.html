@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map</title>
+    <script src="../../jq/jquery-1.11.1.min.js" ></script>
+</head>
+<body>
+    map的一些性质
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //map对象，类似php的关联数组  get set 获取和设置值
+        var address = new Map([['james', 'celevland'],['sam', 'south street'],['kitty', 'lucky']]);
+        console.log(address.get('james'));
+        address.set('lebron', 'north street');
+        console.log(address.get('lebron'));
+        address.forEach(function (value, key, map) {
+            console.log(key + ':' + value)
+        })
+    })
+
+</script>

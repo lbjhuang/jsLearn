@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>数组</title>
+    <title>数组的性质</title>
 </head>
 <body>
 </body>
@@ -14,9 +14,13 @@
     arr[2] = 65;
     arr[3] = 52;
     arr[4] = 19;
+    var slice_arr = arr.slice(0,2);  //从0开始截取2个元素
+    alert(slice_arr);
+    alert(arr.indexOf('China'));
     alert(arr);
-    var arr1 = arr.join("&");  //Join方法返回一个字符串数组。
-    alert(arr1);
+
+    var arr1 = arr.join("&");  //Join方法返回用&把数组中的值连接起来的一个字符串。
+    alert(typeof(arr1));  //String:  China&12&65&52&19
     var arr2 = ['America', 'Japan'];
     var arr3 = arr.concat(arr2);   //数组合并
     alert(arr3)
