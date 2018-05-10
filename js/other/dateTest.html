@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function() {
+        var now = new Date();
+        //alert(now)
+        //return
+        // lastMonth = now.setDate(now.getMonth()-1);
+        //
+        // console.log(Math.round(lastMonth / 1000));
+        /**
+         * 获取上一个月
+         *
+         * @date 格式为yyyy-mm-dd的日期，如：2014-01-25
+         */
+        function getPreMonth(date) {
+            var arr = date.split('-');
+            var year = arr[0];
+            var month = arr[1];
+            var day = arr[2];
+
+            var lasMonth = month - 1;
+            if (lasMonth == 0) {
+                year = year - 1;
+                month2 = 12;
+            }
+            var day2 = new Date(year, lasMonth, 0);
+            day2 = day2.getDate();      //获取这个月有多少天
+            if (day > day2) day = day2;
+            if (lasMonth < 10) lasMonth = '0' + lasMonth;
+            var lastMoment = year + '-' + lasMonth + '-' + day;
+            return lastMoment;
+        }
+
+        var now = new Date()
+        var year = now.getFullYear()
+        var month = now.getMonth() + 1
+        var day = now.getDate()
+        if(month < 10) month = '0' + month
+        if(day < 10)  day = '0' +  day
+        date =  year + '-' + month + '-' + day
+        last = getPreMonth(date)
+        console.log(last)
+        console.log(date)
+
+    })
+</script>
+
+</body>
+</html>

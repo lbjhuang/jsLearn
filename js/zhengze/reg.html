@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script>
+    //判断一个字符串是否包含了另一个字符串  参考：https://www.cnblogs.com/ooo0/p/7741651.html
+    //方法1  indexOf
+    var str = '/erp/shopcustomer/manage_account?id'
+    var url = '/erp/shopcustomer/manage_account?id=888'
+
+    if(url.indexOf(str) != -1){
+        console.log('pipei')
+    }else{
+        console.log('bupipei')
+    }
+
+    //方法2 RegExp.test()正则匹配
+    // if(new RegExp("/erp/shopcustomer/manage_account\?", 'i').test(str)){
+    //    console.log('pipei')
+    //    console.log(new RegExp("/erp/shopcustomer/manage_account\?", 'i').test(str))
+    // }else{
+    //     console.log(new RegExp("/erp/shopcustomer/manage_account\?", 'i').test(str))
+    //     console.log('bupipei')
+    // }
+
+
+
+
+</script>
+
+</body>
+</html>

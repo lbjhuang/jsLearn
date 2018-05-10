@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script>
+    //g代表全局匹配，如果不加g则找到一个符合正则的就返回了
+    var str = 'dds123gdea789rested058wwl'
+    var re1 = /\d+/g
+    var re2 = /\d+/
+    console.log(str.match(re1))
+    console.log(str.match(re2))
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jq/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000">
+
+    </canvas>
+
+    <script>
+        var myCanvas = $("#myCanvas")[0];
+        var ctx = myCanvas.getContext("2d")
+        ctx.fillStyle = "#FF0000"  //颜色
+        ctx.fillRect(0,0,150,75)
+        //直线
+        ctx.moveTo(0,0)
+        ctx.lineTo(200,50)
+        ctx.stroke()
+        //圆
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+        //文本
+        ctx.font="30px Arial";
+        ctx.fillText("Hello World",50,100);  //实心
+        ctx.strokeText("Hello World",50,50); //空心
+    </script>
+</body>
+</html>
